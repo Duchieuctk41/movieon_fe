@@ -8,7 +8,7 @@
   margin-bottom: 10px;
   background-color: #333;
   height: 120px;
-  width: 220px;
+  min-width: 220px;
   margin-right: 32px;
   border: 1px solid #fff;
   &:hover {
@@ -18,5 +18,19 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+  .movie--item-name {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    font-size: 1rem;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
   }
 }

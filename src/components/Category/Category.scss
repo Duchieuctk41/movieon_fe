@@ -1,6 +1,7 @@
 .category--item {
   padding: 20px 0;
   width: 100%;
+  margin-top: 20px;
 
   .category--title {
     h2 {
@@ -14,8 +15,7 @@
     }
   }
   .category--movie-item {
-      display: flex;
-      padding: 0;
-    }
-  
+    display: flex;
+    padding: 0;
+  }
 }

@@ -6,13 +6,15 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // default là localstorage
 
+import movieReducer from "./movie/movieSlice";
+
 const persistConfig = {
   key: "root",
   storage: storage,
 };
 
 const reducers = combineReducers({
-  // movie: movieReducer,
+  movie: movieReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducers);

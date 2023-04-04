@@ -1,24 +1,111 @@
 {
-  "list_category": [
-    {
-      "id": "1",
-      "name": "Phổ biến trên Netflix",
-      "list_movie": [1,2,3,4,5]
-    },
-    {
-      "id": "2",
-      "name": "Danh sách tiếp tục xem của bạn",
-      "list_movie": [1,2,3,4,5]
-    },
-    {
-      "id": "3",
-      "name": "Hiện đang thình hành",
-      "list_movie": [1,2,3,4,5]
-    },
-    {
-      "id": "4",
-      "name": "Gợi ý cho bạn",
-      "list_movie": [1,2,3,4,5]
-    }
-  ]
+  "title": "Danh sách tiếp tục xem của bạn",
+  "data": [
+      {
+          "id": "7436c73f-81ea-440e-9172-8cb2ca1a9100",
+          "created_at": "2023-04-04T17:12:34.027+07:00",
+          "updated_at": "2023-04-04T17:12:34.027+07:00",
+          "type": "Comedy",
+          "cast": "",
+          "name": "Andrew Dice Clay: Dice Rules (1991)",
+          "spoil": "",
+          "duration": 0,
+          "release_date": "",
+          "country": "",
+          "language": "",
+          "rated": "",
+          "director": "",
+          "status": "",
+          "poster": "",
+          "trailer": "",
+          "format": "",
+          "gorm:id_old": "193609"
+      },
+      {
+          "id": "abc6ac25-ccb8-45af-866a-4a76c4157758",
+          "created_at": "2023-04-04T17:12:33.98+07:00",
+          "updated_at": "2023-04-04T17:12:33.98+07:00",
+          "type": "Action|Animation",
+          "cast": "",
+          "name": "Bungo Stray Dogs: Dead Apple (2018)",
+          "spoil": "",
+          "duration": 0,
+          "release_date": "",
+          "country": "",
+          "language": "",
+          "rated": "",
+          "director": "",
+          "status": "",
+          "poster": "",
+          "trailer": "",
+          "format": "",
+          "gorm:id_old": "193587"
+      },
+      {
+          "id": "21880776-894b-4c6b-884c-f22ad5477948",
+          "created_at": "2023-04-04T17:12:33.88+07:00",
+          "updated_at": "2023-04-04T17:12:33.88+07:00",
+          "type": "Drama",
+          "cast": "",
+          "name": "Flint (2017)",
+          "spoil": "",
+          "duration": 0,
+          "release_date": "",
+          "country": "",
+          "language": "",
+          "rated": "",
+          "director": "",
+          "status": "",
+          "poster": "",
+          "trailer": "",
+          "format": "",
+          "gorm:id_old": "193585"
+      },
+      {
+          "id": "3149155c-61fe-4360-8325-3c459fb1291d",
+          "created_at": "2023-04-04T17:12:33.739+07:00",
+          "updated_at": "2023-04-04T17:12:33.739+07:00",
+          "type": "Animation|Comedy|Fantasy",
+          "cast": "",
+          "name": "No Game No Life: Zero (2017)",
+          "spoil": "",
+          "duration": 0,
+          "release_date": "",
+          "country": "",
+          "language": "",
+          "rated": "",
+          "director": "",
+          "status": "",
+          "poster": "",
+          "trailer": "",
+          "format": "",
+          "gorm:id_old": "193583"
+      },
+      {
+          "id": "0b6f6d6f-3c22-4d76-9e6e-cb11bf5a2393",
+          "created_at": "2023-04-04T17:12:33.672+07:00",
+          "updated_at": "2023-04-04T17:12:33.672+07:00",
+          "type": "Action|Animation|Comedy|Fantasy",
+          "cast": "",
+          "name": "Black Butler: Book of the Atlantic (2017)",
+          "spoil": "",
+          "duration": 0,
+          "release_date": "",
+          "country": "",
+          "language": "",
+          "rated": "",
+          "director": "",
+          "status": "",
+          "poster": "",
+          "trailer": "",
+          "format": "",
+          "gorm:id_old": "193581"
+      }
+  ],
+  "meta": {
+      "page": 1,
+      "page_size": 30,
+      "total_pages": 0,
+      "total_rows": 0
+  }
 }

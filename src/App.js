@@ -18,7 +18,7 @@ function App() {
 
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/info" exact element={<Info />} />
+          <Route path="/info/:movieId" exact element={<Info />} />
           <Route path="/login" exact element={<ModalLogin />} />
           <Route path="/user" exact element={<User />} />
         </Routes>
