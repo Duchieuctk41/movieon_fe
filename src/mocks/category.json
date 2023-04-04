@@ -1,0 +1,24 @@
+{
+  "list_category": [
+    {
+      "id": "1",
+      "name": "Phổ biến trên Netflix",
+      "list_movie": [1,2,3,4,5]
+    },
+    {
+      "id": "2",
+      "name": "Danh sách tiếp tục xem của bạn",
+      "list_movie": [1,2,3,4,5]
+    },
+    {
+      "id": "3",
+      "name": "Hiện đang thình hành",
+      "list_movie": [1,2,3,4,5]
+    },
+    {
+      "id": "4",
+      "name": "Gợi ý cho bạn",
+      "list_movie": [1,2,3,4,5]
+    }
+  ]
+}

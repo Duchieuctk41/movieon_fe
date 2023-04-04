@@ -1,19 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Login.scss";
+import { useDispatch } from "react-redux";
+import { loginAPI } from "redux/user/userSlice";
 
-const Login = () => {
+const ModalLogin = ({ handleClickLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const handleCloseModal = () => {
+    handleClickLogin();
+  };
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = () => {
+    let data = {
+      email: email,
+      password: password,
+    };
+    dispatch(loginAPI(data));
+    handleCloseModal();
+  };
   return (
-    <div className="login__container">
-      <h2>Đăng nhập</h2>
-      <input placeholder="Email" />
-      <input placeholder="Mật khẩu" />
-      <button>Đăng nhập</button>
-      <div>
-        <span>Lưu mật khẩu</span>
-        <span>Đăng ký</span>
+    <div className="modal">
+      <div className="modal_container">
+        <div className="modal_bg">
+          <h1>Đăng nhập</h1>
+          <div className="login__form">
+            <div className="login__form__group">
+              <input
+                type="email"
+                className="login__form__input"
+                placeholder="Email"
+                onChange={(e) => handleEmail(e)}
+              />
+              <input
+                type="password"
+                className="login__form__input"
+                placeholder="Password"
+                onChange={(e) => handlePassword(e)}
+              />
+              <button onClick={() => handleLogin()}>Đăng nhập</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <span>Tài khoản mới? Đăng ký ngay</span>
     </div>
   );
 };
-
-export default Login;
+export default ModalLogin;
