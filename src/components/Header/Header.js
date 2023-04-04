@@ -17,9 +17,9 @@ const Header = () => {
             <div className="header__menu-item">
               <ul>
                 <Link to="/">Trang chủ</Link>
-                <Link to="/">Truyền hình</Link>
+                <Link to="/">Phim T.hình</Link>
                 <Link to="/">Phim</Link>
-                <Link to="/">Mới thêm</Link>
+                <Link to="/">P.Chiếu rạp</Link>
                 <Link to="/">Danh sách của tôi</Link>
               </ul>
             </div>
@@ -29,9 +29,9 @@ const Header = () => {
           <div className="header__search">
             <input placeholder="Tìm kiếm..."></input>
           </div>
-          <div className="header__language">
+          {/* <div className="header__language">
             <a>En</a>
-          </div>
+          </div> */}
           <div className="header__avatar">Avatar</div>
         </div>
       </div>
