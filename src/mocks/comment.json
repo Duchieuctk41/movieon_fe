@@ -1,0 +1,36 @@
+{
+  "list_comment": [
+    {
+      "id": "1",
+      "user_id": "1",
+      "user_name":"Tên người dùng",
+      "avatar": "Link avatar người dùng",
+      "content": "Nội dung của người bình luận",
+      "created_at": "1 tuần trước"
+    },
+    {
+      "id": "2",
+      "user_id": "2",
+      "user_name":"Tên người dùng",
+      "avatar": "Link avatar người dùng",
+      "content": "Nội dung của người bình luận",
+      "created_at": "1 tuần trước"
+    },
+    {
+      "id": "3",
+      "user_id": "3",
+      "user_name":"Tên người dùng",
+      "avatar": "Link avatar người dùng",
+      "content": "Nội dung của người bình luận",
+      "created_at": "1 tuần trước"
+    },
+    {
+      "id": "4",
+      "user_id": "4",
+      "user_name":"Tên người dùng",
+      "avatar": "Link avatar người dùng",
+      "content": "Nội dung của người bình luận",
+      "created_at": "1 tuần trước"
+    }
+  ]
+}

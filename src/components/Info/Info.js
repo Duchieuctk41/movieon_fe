@@ -1,6 +1,14 @@
 import React from "react";
 import PICTURE_DEFAULT from "assets/img/default.jpg";
 import "./Info.scss";
+import mockSuggestMovie from "mocks/suggest_movie.json";
+import mockEpisode from "mocks/episode.json";
+import Category from "components/Category/Category";
+import Episode from "components/Episode/Episode";
+import mockComment from "mocks/comment.json";
+import Comment from "components/Comment/Comment";
+import WriteComment from "components/Comment/WriteComment";
+import Tab from "components/Tab/Tab";
 
 const Info = () => {
   return (
@@ -29,59 +37,32 @@ const Info = () => {
               Xương Khủng Long
             </span>
             <span>
-              Thể loại: Nguyễn Đức Hiếu, Lưu Đức Thái, Trương Mỹ Hảo, Khúc
-              Xương Khủng Long
+              Thể loại: Nguyễn Đức Hiếu, Lưu Đức Thái, Trương Mỹ Hảo, Khúc Xương
+              Khủng Long
             </span>
             <span>
-              Chương trình này: Nguyễn Đức Hiếu, Lưu Đức Thái, Trương Mỹ Hảo, Khúc
-              Xương Khủng Long
+              Chương trình này: Nguyễn Đức Hiếu, Lưu Đức Thái, Trương Mỹ Hảo,
+              Khúc Xương Khủng Long
             </span>
           </div>
         </div>
       </div>
-      <div className="info__tab">
-        <span>Danh sách tập</span>
-        <span>Bình luận</span>
-      </div>
+      <Tab />
       <div className="info__comment">
-        <div className="info__comment--write">
-          <div>
-            <img src={PICTURE_DEFAULT} />
-          </div>
-          <div>
-            <input placeholder="Nhập bình luận" />
-          </div>
-        </div>
+        <WriteComment />
         <div className="info__comment--list">
-          <div className="info__comment--item">
-            <div>
-              <img src={PICTURE_DEFAULT} />
-            </div>
-            <div>
-              <span>Tên người dùng</span>
-              <span>Bình luận của người dùng</span>
-              <div>
-                <span>Thích</span>
-                <span>Phản hồi</span>
-                <span>1 tuần trước</span>
-              </div>
-            </div>
-          </div>
+          {mockComment.list_comment.map((comment) => (
+            <Comment key={comment.id} comment={comment} />
+          ))}
         </div>
       </div>
       <div className="info__episode">
-        <ul>
-          <li>
-            <span>1</span>
-            <img alt="" />
-            <div>
-              <span>Tên tập</span>
-              <span>Thời lượng</span>
-              <span>Mô tả nội dung tập</span>
-            </div>
-          </li>
-        </ul>
+        <h2>Danh sách tập:</h2>
+        {mockEpisode.list_episode.map((ep) => (
+          <Episode key={ep.id} ep={ep} />
+        ))}
       </div>
+      <Category item={mockSuggestMovie} />
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.category--item {
+  padding: 20px 0;
+  width: 100%;
+
+  .category--title {
+    h2 {
+      color: #e79427;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+  }
+  .category--movie-item {
+      display: flex;
+      padding: 0;
+    }
+  
+}

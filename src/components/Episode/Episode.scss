@@ -1,0 +1,35 @@
+.episode--item {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px #ccc;
+  align-items: center;
+  img {
+    width: 50px;
+    height: 50px;
+    margin: 0 1rem;
+  }
+  .episode--item-content {
+    display: flex;
+    flex-direction: column;
+    .episode--item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .episode--item-title {
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+      .episode--item-duration {
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+    }
+    .episode--item-text {
+      margin: 0.3rem 0;
+    }
+  }
+}

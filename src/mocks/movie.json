@@ -1,0 +1,50 @@
+{
+  "list_movie": {
+    "data": [
+        {
+            "id": "8214b1bb-9b12-4122-8cf1-d9047564815f",
+            "created_at": "2023-04-04T10:27:39.329+07:00",
+            "updated_at": "2023-04-04T10:27:39.329+07:00",
+            "type": "action, romantic",
+            "cast": "Nguyễn Đức Hiếu, Trưởng Mỹ Hảo",
+            "name": "Người nhện 3: Venom",
+            "spoil": "Một bộ phim hay sắp được ra mắt...",
+            "duration": 150,
+            "release_date": "2022-12-15 17:04:26",
+            "country": "american",
+            "language": "Tiếng Anh, vietsub",
+            "rated": "+16",
+            "director": "jame camaroon",
+            "status": "showing",
+            "poster": "https://d1j8r0kxyu9tj8.cloudfront.net/images/1566809317niNpzY2khA3tzMg.jpg",
+            "trailer": "link url trailer",
+            "format": ""
+        },
+        {
+            "id": "59736357-eaaf-4d7b-85ed-734da37e8d85",
+            "created_at": "2023-04-04T10:27:05.038+07:00",
+            "updated_at": "2023-04-04T10:27:05.038+07:00",
+            "type": "action, romantic",
+            "cast": "Nguyễn Đức Hiếu, Trưởng Mỹ Hảo",
+            "name": "Người nhện 2: Không còn nhà",
+            "spoil": "Một bộ phim hay sắp được ra mắt...",
+            "duration": 150,
+            "release_date": "2022-12-15 17:04:26",
+            "country": "american",
+            "language": "Tiếng Anh, vietsub",
+            "rated": "+16",
+            "director": "jame camaroon",
+            "status": "showing",
+            "poster": "https://d1j8r0kxyu9tj8.cloudfront.net/images/1566809317niNpzY2khA3tzMg.jpg",
+            "trailer": "link url trailer",
+            "format": ""
+        }
+    ],
+    "meta": {
+        "page": 1,
+        "page_size": 30,
+        "total_pages": 0,
+        "total_rows": 0
+    }
+}
+}
