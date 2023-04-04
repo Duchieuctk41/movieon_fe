@@ -21,11 +21,52 @@
         width: 70%;
         padding: 20px;
         background-color: rebeccapurple;
+        .info__content--bottom--left--top {
+          height: 45%;
+          background-color: aqua;
+          .info__movie--top{
+            .year__movie {
+              padding: 7px;
+            }
+            .length__movie {
+              padding: 7px;
+            }
+            .quality__movie {
+              padding: 7px;
+            }
+          }
+        }
+        .info__content--bottom--left--bottom {
+          height: 55%;
+          background-color: brown;
+          .info__movie--bottom{
+            .movie__ontop {
+              font-size: 20px;
+              background-color: aqua;
+            }
+            .movie__summary {
+              padding-top: 5px;
+              font-size: 10px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: bold;
+              background-color: black;
+            }
+          }
+        }
       }
       .info__content--bottom--right {
         width: 30%;
         padding: 20px;
         background-color: red;
+        .movie__cast {
+          height: 30%;
+        }
+        .movie__genres {
+          height: 30%;
+        }
+        .movie__about {
+          height: 30%;
+        }
       }
     }
   }
