@@ -1,9 +1,12 @@
 .info__container {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   z-index: 2;
   margin-top: 35px;
   position: relative;
+  background-color: #181818;
+  color: #fff;
+  border-radius: 10px;
   .info__content {
     width: 100%;
     .info__content--top {
@@ -20,11 +23,9 @@
       .info__content--bottom--left {
         width: 70%;
         padding: 20px;
-        background-color: rebeccapurple;
         .info__content--bottom--left--top {
           height: 45%;
-          background-color: aqua;
-          .info__movie--top{
+          .info__movie--top {
             .year__movie {
               padding: 7px;
             }
@@ -38,11 +39,9 @@
         }
         .info__content--bottom--left--bottom {
           height: 55%;
-          background-color: brown;
-          .info__movie--bottom{
+          .info__movie--bottom {
             .movie__ontop {
               font-size: 20px;
-              background-color: aqua;
             }
             .movie__summary {
               padding-top: 5px;
@@ -57,7 +56,6 @@
       .info__content--bottom--right {
         width: 30%;
         padding: 20px;
-        background-color: red;
         .movie__cast {
           height: 30%;
         }

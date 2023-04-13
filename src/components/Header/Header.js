@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaHome } from "react-icons/fa";
 import "../Header/Header.scss";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleRedirectLogin = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="header">
       <div className="nav">
@@ -32,7 +37,9 @@ const Header = () => {
           {/* <div className="header__language">
             <a>En</a>
           </div> */}
-          <div className="header__avatar">Avatar</div>
+          <div className="header__avatar" onClick={handleRedirectLogin}>
+            Avatar
+          </div>
         </div>
       </div>
     </div>
