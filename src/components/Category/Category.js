@@ -10,7 +10,7 @@ const Category = ({ item, title }) => {
       </div>
       <div className="category--movie-item">
         {item.map((movie) => (
-          <Movie movie={movie} key={movie} />
+          <Movie movie={movie} key={movie.id} />
         ))}
       </div>
     </div>

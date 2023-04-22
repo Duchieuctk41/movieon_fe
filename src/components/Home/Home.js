@@ -14,7 +14,7 @@ const Home = () => {
   const listMovie = useSelector(selectCurrentMovie);
 
   const getListMovie = async () => {
-    const data = await movieApi.getListMovie();
+    const data = await movieApi.getListMovie({ page_size: 10 });
     // update to redux
     dispatch(actionUpdateMovie(data));
   };
@@ -30,15 +30,17 @@ const Home = () => {
       </div>
       <div className="home_container">
         <div className="home_content">
-          <Category item={listMovie.data} title="Phổ biến trên Netflix" />
+          {listMovie && (
+            <Category item={listMovie.data} title="Phổ biến trên Netflix" />
+          )}
           {/**Mock data: Render list movie */}
-          {mockListCategory.data.map((item) => (
+          {/* {mockListCategory.data.map((item) => (
             <Category
               key={item.id}
               item={mockListCategory.data}
               title={mockListCategory.title}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
