@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./Login.scss";
 import { useDispatch } from "react-redux";
 import { loginAPI } from "redux/user/userSlice";
+import SLIDE_DEFAULT from "assets/img/hero.jpg";
+import Input from "components/input/input";
+
 
 const ModalLogin = ({ handleClickLogin }) => {
   const [email, setEmail] = useState("");
@@ -29,26 +32,24 @@ const ModalLogin = ({ handleClickLogin }) => {
     handleCloseModal();
   };
   return (
-    <div className="modal">
-      <div className="modal_container">
-        <div className="modal_bg">
-          <h1>Đăng nhập</h1>
-          <div className="login__form">
-            <div className="login__form__group">
-              <input
-                type="email"
-                className="login__form__input"
-                placeholder="Email"
-                onChange={(e) => handleEmail(e)}
-              />
-              <input
-                type="password"
-                className="login__form__input"
-                placeholder="Password"
-                onChange={(e) => handlePassword(e)}
-              />
-              <button onClick={() => handleLogin()}>Đăng nhập</button>
+    <div className=" relative login_container w-full bg-[url('/src/assets/img/hero.jpg')] bg-no-repeat bg-fixed bg-cover " >
+      <div className="w-full h-full bg-black bg-opacity-50">
+        <div className="flex justify-center">
+          <div className=" bg-opacity-70 bg-black  self-center px-16 py-16 mt-16 max-w-md rounded-md w-full">
+            <h2 className=" text-white text-4xl mb-8 font-semibold">
+              Sign in
+            </h2>
+            <div className="flex flex-col gap-4">
+              <Input name="email"/>
+              <Input name="password"/>
             </div>
+            <button className=" bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition"> Login</button>
+            <p className=" text-neutral-500 mt-12">
+              Fist time using Netflix?
+              <span className=" text-white ml-1 hover:underline cursor-pointer">
+                Create and account
+              </span>
+            </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../Home/Home.scss";
-import SLIDE_DEFAULT from "assets/img/slide_default.jpg";
+import SLIDE_DEFAULT from "assets/img/hero.jpg";
 import { movieApi } from "actions";
 import mockListCategory from "mocks/category.json";
 import Category from "components/Category/Category";
@@ -30,17 +30,15 @@ const Home = () => {
       </div>
       <div className="home_container">
         <div className="home_content">
-          {listMovie && (
-            <Category item={listMovie.data} title="Phổ biến trên Netflix" />
-          )}
+          <Category item={listMovie.data} title="Phổ biến trên Netflix" />
           {/**Mock data: Render list movie */}
-          {/* {mockListCategory.data.map((item) => (
+          {mockListCategory.data.map((item) => (
             <Category
               key={item.id}
               item={mockListCategory.data}
               title={mockListCategory.title}
             />
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
