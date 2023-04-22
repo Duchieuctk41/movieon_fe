@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Header/Header.scss";
 import { useNavigate } from "react-router-dom";
+import LOGO_DEFAULT from  "assets/img/logo.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -14,9 +15,9 @@ const Header = () => {
       <div className="nav">
         <div className="nav__left">
           <div className="header__logo">
-            <Link to="/">
-              <img src="https://cinestar.com.vn/pictures/moi/9Logo/white-2018.png"></img>
-            </Link>
+            <nav className="">
+              <img src={LOGO_DEFAULT}/>
+            </nav>
           </div>
           <div className="header__menu">
             <div className="header__menu-item">
