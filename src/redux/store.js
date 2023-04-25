@@ -7,6 +7,7 @@ import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // default là localstorage
 
 import movieReducer from "./movie/movieSlice";
+import userReducer from "./user/userSlice";
 
 const persistConfig = {
   key: "root",
@@ -15,6 +16,7 @@ const persistConfig = {
 
 const reducers = combineReducers({
   movie: movieReducer,
+  user: userReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducers);

@@ -6,12 +6,18 @@ import mockListCategory from "mocks/category.json";
 import Category from "components/Category/Category";
 
 import { useDispatch, useSelector } from "react-redux";
-import { actionUpdateMovie } from "redux/movie/movieSlice";
-import { selectCurrentMovie } from "redux/movie/movieSlice";
+import { actionUpdateMovie, selectCurrentMovie } from "redux/movie/movieSlice";
+import { useSearchParams } from "react-router-dom";
+
+import Info from "components/Info/Info";
 
 const Home = () => {
   const dispatch = useDispatch();
   const listMovie = useSelector(selectCurrentMovie);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // get use Params query
+  const query = searchParams.get("m");
 
   const getListMovie = async () => {
     const data = await movieApi.getListMovie({ page_size: 10 });
@@ -25,20 +31,21 @@ const Home = () => {
 
   return (
     <div>
-      <div className="home_content--background">
-        <img src={SLIDE_DEFAULT} />
-      </div>
-      <div className="home_container">
-        <div className="home_content">
-          <Category item={listMovie.data} title="Phổ biến trên Netflix" />
-          {/**Mock data: Render list movie */}
-          {mockListCategory.data.map((item) => (
-            <Category
-              key={item.id}
-              item={mockListCategory.data}
-              title={mockListCategory.title}
-            />
-          ))}
+      <div className="home_content--background bg-[url('/src/assets/img/hero.jpg')]">
+        {/* <img src={SLIDE_DEFAULT} /> */}
+        {query ? <Info id={query} /> : null}
+        <div className="home_container">
+          <div className="home_content">
+            <Category item={listMovie.data} title="Phổ biến trên Netflix" />
+            {/**Mock data: Render list movie */}
+            {mockListCategory.data.map((item) => (
+              <Category
+                key={item.id}
+                item={mockListCategory.data}
+                title={mockListCategory.title}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

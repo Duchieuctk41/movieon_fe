@@ -19,6 +19,22 @@ const movieApi = {
     );
     return request.data;
   },
+
+  getSuggestMovie: async (userId) => {
+    const request = await authorizedAxiosInstance.get(
+      `${API_ROOT_GOLANG}/api/v1/movie/get-list-suggest/${userId}`
+    );
+    return request.data;
+  },
+
+  
+  UpdateViewCount: async (data) => {
+    const request = await authorizedAxiosInstance.post(
+      `${API_ROOT_GOLANG}/api/v1/movie/view-count`,
+      data
+    );
+    return request.data;
+  },
 };
 
 export default movieApi;

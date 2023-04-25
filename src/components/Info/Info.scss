@@ -1,47 +1,124 @@
 .info__container {
-  width: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: #00000073;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  overflow: hidden;
+  width: 65%;
   margin: 0 auto;
-  z-index: 2;
-  margin-top: 35px;
-  position: relative;
-  background-color: #181818;
-  color: #fff;
-  border-radius: 10px;
   .info__content {
-    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    background-color: #181818;
+    color: #f3f3f3;
+    border-radius: 10px;
+    height: 95vh;
+    overflow-y: scroll;
+    top: 35px;
+    right: -17px;
+    box-sizing: content-box;
     .info__content--top {
       width: 100%;
-      img {
+      height: 70vh;
+      background-size: cover;
+      border-radius: 10px;
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0) 0%,
+          rgba(24, 24, 24, 1) 100%
+        ),
+        url(https://media.wired.com/photos/5ae216c03f3b183561144223/master/w_2560%2Cc_limit/AvengersInfinityWar.jpg);
+      .info__content--top-container {
+        position: relative;
+        top: 60%;
+        padding-left: 3rem;
+        padding-right: 2rem;
         width: 100%;
-        height: 70vh;
-        border-radius: 10px;
+      }
+      .info__content--top-title {
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-style: italic;
+        margin-bottom: 24px;
+      }
+      .info__content--top-nav {
+        display: flex;
+        justify-content: space-between;
+        div {
+          display: flex;
+        }
+        button {
+          border-color: hsla(0, 0%, 100%, 0.5);
+          border-width: 2px;
+          margin-right: 8px;
+        }
       }
     }
 
     .info__content--bottom {
+      padding: 0 48px;
       display: flex;
       .info__content--bottom--left {
-        width: 70%;
-        padding: 20px;
+        margin-right: 2rem;
         .info__content--bottom--left--top {
-          height: 45%;
+          margin: 0.6rem 0;
           .info__movie--top {
+            display: flex;
+            align-items: center;
             .year__movie {
-              padding: 7px;
+              font-size: 0.9rem;
+              font-weight: bold;
             }
             .length__movie {
-              padding: 7px;
+              font-size: 0.9rem;
+              font-weight: bold;
+              color: #f3f3f3;
+              margin: 0 8px;
             }
             .quality__movie {
-              padding: 7px;
+              font-size: 0.5rem;
+              font-weight: bold;
+              color: #f3f3f3;
+              padding: 0.5px 6px;
+              border: 0.5px solid #747474;
+              border-radius: 4px;
+            }
+          }
+
+          .info__movie--bottom {
+            span {
+              font-size: 0.8rem;
+            }
+            .age_limit__movie {
+              padding: 1px 4px;
+              border: 0.5px solid #747474;
+              margin-right: 8px;
             }
           }
         }
         .info__content--bottom--left--bottom {
           height: 55%;
+          .movie__ontop {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+          }
+          .movie__summary {
+            font-size: 14px;
+            line-height: 24px;
+          }
           .info__movie--bottom {
             .movie__ontop {
-              font-size: 20px;
+              font-size: 0.8rem;
+              span {
+                font-size: 0.8rem;
+                font-weight: bold;
+              }
             }
             .movie__summary {
               padding-top: 5px;
@@ -54,18 +131,66 @@
         }
       }
       .info__content--bottom--right {
-        width: 30%;
-        padding: 20px;
-        .movie__cast {
-          height: 30%;
+        margin: 0.8rem 0;
+        .movie__quote {
+          color: #777;
+          font-size: 0.8rem;
         }
-        .movie__genres {
-          height: 30%;
-        }
-        .movie__about {
-          height: 30%;
+        .movie__info {
+          font-size: 0.8rem;
         }
       }
     }
+  }
+}
+
+.highlight__green {
+  color: #46d369;
+}
+
+.button__grey {
+  background-color: #2a2a2a99;
+}
+
+.button__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f3f3f3;
+  transition: all 0.2s ease-in-out;
+  background-color: #181818;
+}
+.button__circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #777;
+  }
+}
+
+.button__square {
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #777;
+    color: #fff;
   }
 }
