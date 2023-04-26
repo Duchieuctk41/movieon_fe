@@ -27,10 +27,10 @@ const movieApi = {
     return request.data;
   },
 
-  
   UpdateViewCount: async (data) => {
+    console.log(data)
     const request = await authorizedAxiosInstance.post(
-      `${API_ROOT_GOLANG}/api/v1/movie/view-count`,
+      `${API_ROOT_GOLANG}/api/v1/movie/update-view`,
       data
     );
     return request.data;

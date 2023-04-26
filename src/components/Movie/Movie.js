@@ -18,15 +18,20 @@ const Movie = ({ movie }) => {
 
     // call api to plus view count to summary best movie
     // call api to update view_movie table (or rating table) to update recommendation system
-    movieApi.UpdateViewCount({ movieId: movie.id, userId: user.id });
+    movieApi.UpdateViewCount({ movie_id: movie.id, user_id: user.id });
 
     // call api to get list suggest movie
   };
 
   return (
     <div className="movie--item" onClick={handleClick}>
-      <img src={PICTURE_DEFAULT} alt="" />
-      <span className="movie--item-name">{movie.name}</span>
+      <div className="movie--item_border">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYUrQmfzV1NCNHrvqgbsQxSleVLvIMAelQZQ&usqp=CAU"
+          alt=""
+        />
+        <span className="movie--item-name">{movie.name}</span>
+      </div>
     </div>
   );
 };

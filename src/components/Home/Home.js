@@ -32,7 +32,8 @@ const Home = () => {
   return (
     <div>
       <div className="home_content--background">
-        <img src={SLIDE_DEFAULT} />
+        <div className="home_content__bg"></div>
+        {/* <img src={SLIDE_DEFAULT} /> */}
         {query ? <Info id={query} /> : null}
         <div className="home_container">
           <div className="home_content">
