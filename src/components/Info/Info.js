@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 import { movieApi } from "actions";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "redux/user/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const Info = ({ id }) => {
   // get user from redux
@@ -28,6 +29,13 @@ const Info = ({ id }) => {
     // get list suggest movie
     const listSuggestMovie = await movieApi.getSuggestMovie(user.id_old);
     setListSuggestMovie(listSuggestMovie.data);
+  };
+
+  const navigate = useNavigate();
+
+  const handleClickCloseModal = () => {
+    // redirect to home page
+    navigate("/home");
   };
 
   useEffect(() => {
@@ -80,7 +88,12 @@ const Info = ({ id }) => {
         ) : (
           <div className="info__content">
             <div className="info__content--top">
-              <button className="button__circle button__close">X</button>
+              <button
+                className="button__circle button__close"
+                onClick={handleClickCloseModal}
+              >
+                X
+              </button>
               <div className="info__content--top-container">
                 <div className="info__content--top-title">Biệt đội báo thù</div>
                 <div className="info__content--top-nav">
