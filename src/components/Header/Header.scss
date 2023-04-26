@@ -49,6 +49,9 @@
     }
     .nav__right {
       display: flex;
+      .header__search {
+        border-radius: 5px;
+      }
       .header__avatar {
         margin-left: 16px;
         color: #fff;

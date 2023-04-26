@@ -1,17 +1,24 @@
 .episode--item {
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 1px;
   padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 2px 3px #ccc;
+  box-shadow: 0 0.5px 0 #ccc;
   align-items: center;
-  img {
-    width: 50px;
-    height: 50px;
-    margin: 0 1rem;
+
+  .episode__item_number {
+    font-weight: bold;
+    font-size: 1.3rem;
   }
+  .episode__item_img {
+    padding: 16px 0;
+    margin: 0 1rem;
+    img {
+      min-width: 150px;
+      max-height: 70px;
+      border: 0.5px solid #ccc;
+    }
+  }
+
   .episode--item-content {
     display: flex;
     flex-direction: column;
@@ -20,16 +27,22 @@
       justify-content: space-between;
       align-items: center;
       .episode--item-title {
-        font-weight: bold;
+        font-size: 0.8rem;
+        font-weight: 600;
         margin-right: 0.5rem;
+        color: #46d369;
       }
       .episode--item-duration {
         font-size: 0.8rem;
         font-weight: bold;
+        padding-right: 16px;
       }
     }
     .episode--item-text {
       margin: 0.3rem 0;
+      padding-right: 16px;
+      font-size: 0.8rem;
+      color: #ccc;
     }
   }
 }

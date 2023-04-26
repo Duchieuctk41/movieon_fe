@@ -1,5 +1,4 @@
 import React from "react";
-import PICTURE_DEFAULT from "assets/img/default.jpg";
 import "./Info.scss";
 import mockSuggestMovie from "mocks/suggest_movie.json";
 import mockEpisode from "mocks/episode.json";
@@ -14,6 +13,7 @@ import { movieApi } from "actions";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "redux/user/userSlice";
 import { useNavigate } from "react-router-dom";
+import SuggestMovie from "components/SuggestMovie/SuggestMovie";
 
 const Info = ({ id }) => {
   // get user from redux
@@ -158,27 +158,30 @@ const Info = ({ id }) => {
                 </div>
               </div>
             </div>
+            <Tab />
+            <div className="info__comment">
+              <WriteComment />
+              <div className="info__comment--list">
+                {mockComment.list_comment.map((comment) => (
+                  <Comment key={comment.id} comment={comment} />
+                ))}
+              </div>
+            </div>
+            <div className="info__episode">
+            <h2>Danh sách tập:</h2>
+            {mockEpisode.list_episode.map((ep) => (
+              <Episode key={ep.id} ep={ep} />
+            ))}
           </div>
-        )}
-        <Tab />
-        {/* <div className="info__comment">
-        <WriteComment />
-        <div className="info__comment--list">
-          {mockComment.list_comment.map((comment) => (
-            <Comment key={comment.id} comment={comment} />
-          ))}
-        </div>
-      </div> */}
-        {/* <div className="info__episode">
-        <h2>Danh sách tập:</h2>
-        {mockEpisode.list_episode.map((ep) => (
-          <Episode key={ep.id} ep={ep} />
-        ))}
-      </div> */}
-        {listSuggestMovie ? (
-          <Category item={listSuggestMovie} title="Gợi ý cho bạn" />
-        ) : (
-          <div>Không có gợi ý</div>
+            <div className="info__suggest">
+              <h2>Nội dung tương tự</h2>
+              <div className="info__suggest_list">
+                {mockSuggestMovie.data.map((movie) => (
+                  <SuggestMovie key={movie.id} />
+                ))}
+              </div>
+            </div>
+          </div>
         )}
       </div>
     </div>

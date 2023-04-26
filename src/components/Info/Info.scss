@@ -141,6 +141,24 @@
         }
       }
     }
+
+    .info__suggest {
+      padding: 0 48px;
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-top: 48px;
+      }
+      .info__suggest_list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        align-items: stretch;
+        display: grid;
+        justify-items: stretch;
+      }
+    }
   }
 }
 

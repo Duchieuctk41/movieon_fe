@@ -1,11 +1,8 @@
 .comment--item {
   display: flex;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 2px 3px #ccc;
+  box-shadow: 0 0.5px 0px #ccc;
+  padding: 8px 16px 8px 16px;
+  margin-bottom: 1px;
   img {
     width: 50px;
     height: 50px;
@@ -16,22 +13,25 @@
     flex-direction: column;
     .comment--item-name {
       font-weight: bold;
-      margin-right: 0.5rem;
+      font-size: 0.8rem;
+      color: #e79427;
     }
     .comment--item-footer {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      .comment--item-like {
-        font-weight: bold;
+      .comment--item-quote {
+        font-size: 0.7rem;
+        color: #e79427;
+        margin-right: 8px;
       }
       .comment--item-date {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         color: #888;
       }
     }
     .comment--item-text {
-      margin: 0.3rem 0;
+      margin: 0.2rem 0;
+      font-size: 0.8rem;
     }
   }
 }

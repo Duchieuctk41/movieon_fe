@@ -3,34 +3,34 @@
     {
       "id": "1",
       "user_id": "1",
-      "user_name":"Tên người dùng",
+      "user_name":"Đức Hiếu",
       "avatar": "Link avatar người dùng",
-      "content": "Nội dung của người bình luận",
+      "content": "Tôi thấy phim này hay vãi lồng đèn luôn, mọi người nên coi thử nhé!",
       "created_at": "1 tuần trước"
     },
     {
       "id": "2",
       "user_id": "2",
-      "user_name":"Tên người dùng",
+      "user_name":"Đức Thái",
       "avatar": "Link avatar người dùng",
-      "content": "Nội dung của người bình luận",
+      "content": "Phim dở vlin, đừng coi nữa, tốn thời gian lắm!",
       "created_at": "1 tuần trước"
     },
     {
       "id": "3",
       "user_id": "3",
-      "user_name":"Tên người dùng",
+      "user_name":"Lưu Ly",
       "avatar": "Link avatar người dùng",
-      "content": "Nội dung của người bình luận",
-      "created_at": "1 tuần trước"
+      "content": "Phim hay nha mọi người, tôi rất thích!",
+      "created_at": "12h trước"
     },
     {
       "id": "4",
       "user_id": "4",
-      "user_name":"Tên người dùng",
+      "user_name":"Hoàng Thùy Linh",
       "avatar": "Link avatar người dùng",
-      "content": "Nội dung của người bình luận",
-      "created_at": "1 tuần trước"
+      "content": "Tôi đã khóc khi xem phim này, rất hay!",
+      "created_at": "1h trước"
     }
   ]
 }
