@@ -27,8 +27,19 @@ const movieApi = {
     return request.data;
   },
 
+  getMovieContinue: async (data) => {
+    let params = {
+      params: data,
+    };
+    const request = await authorizedAxiosInstance.get(
+      `${API_ROOT_GOLANG}/api/v1/movie/get-list-con`,
+      params
+    );
+    return request.data;
+  },
+
   UpdateViewCount: async (data) => {
-    console.log(data)
+    console.log(data);
     const request = await authorizedAxiosInstance.post(
       `${API_ROOT_GOLANG}/api/v1/movie/update-view`,
       data

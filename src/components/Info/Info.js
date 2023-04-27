@@ -40,6 +40,10 @@ const Info = ({ id }) => {
     navigate("/home");
   };
 
+  const handleToggleRating = () => {
+    setToggleRating(!toggleRating);
+  };
+
   useEffect(() => {
     getData(id);
   }, []);
@@ -64,12 +68,12 @@ const Info = ({ id }) => {
                     <button className="button__circle button__grey">+</button>
                     <button
                       className="button__circle button__grey"
-                      onClick={() => setToggleRating(!toggleRating)}
+                      onClick={handleToggleRating}
                       // onMouseOut={() => setToggleRating(false)}
                     >
                       L
                     </button>
-                    {toggleRating && <Rating />}
+                    {toggleRating && <Rating movieId={id} />}
                   </div>
                   <div>
                     <button className="button__circle button__grey">M</button>
@@ -82,7 +86,10 @@ const Info = ({ id }) => {
                 <div className="info__content--bottom--left--top">
                   <div className="info__movie--top">
                     <span className="year__movie">
-                      Phát hành: <span className="highlight__green">2023</span>
+                      Phát hành:{" "}
+                      <span className="highlight__green">
+                        {data.release_date}
+                      </span>
                     </span>
                     <span className="length__movie">21 mùa</span>
                     <span className="quality__movie">HD</span>
@@ -158,11 +165,12 @@ const Info = ({ id }) => {
                     <button className="button__circle button__grey">+</button>
                     <button
                       className="button__circle button__grey"
-                      onMouseOver={() => setToggleRating(true)}
-                      onMouseOut={() => setToggleRating(false)}
+                      onClick={handleToggleRating}
+                      // onMouseOut={() => setToggleRating(false)}
                     >
                       L
                     </button>
+                    {toggleRating && <Rating movieId={id} />}
                   </div>
                   <div>
                     <button className="button__circle button__grey">M</button>

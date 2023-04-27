@@ -1,14 +1,26 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import "./Rating.scss";
+import {ratingApi} from "actions"
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "redux/user/userSlice";
 
-const Rating = () => {
+const Rating = ({movieId}) => {
+  const [listRating, setListRating] = React.useState([1,2,3,4,5])
+  const user = useSelector(selectCurrentUser);
+
+const  handleClickRating = (e) => {
+  const data = {
+    "rating": e,
+    "movie_id": movieId,
+    "user_id": user.id,
+  }
+  console.log(data);
+  ratingApi.createOrUpdateRating(data)
+}
+
   return (
     <div className="rating">
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>4</span>
-      <span>5</span>
+      {listRating.map(element => <span key={element} onClick={()=>handleClickRating(element)}>{element}</span>)}
     </div>
       
   )
